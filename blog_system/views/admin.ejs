@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ブログ投稿フォーム</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main style="max-width: 700px; margin: auto; padding: 20px;">
+    <h1>✏️ ブログ投稿フォーム</h1>
+
+    <form action="/admin/post" method="POST" enctype="multipart/form-data">
+      <label for="title">タイトル：</label><br>
+      <input type="text" id="title" name="title" required style="width: 100%;"><br><br>
+
+      <label for="content">本文：</label><br>
+      <textarea id="content" name="content" rows="10" required style="width: 100%;"></textarea><br><br>
+
+      <label for="image">写真を選ぶ（任意）：</label><br>
+      <input type="file" id="image" name="image" accept=".jpg,.jpeg,.png"><br><br>
+
+      <button type="submit">🌸 投稿する</button>
+    </form>
+
+    <p style="margin-top: 2em;">
+      <a href="http://localhost:3000/blog">← ブログ一覧ページへ戻る</a>
+    </p>
+  </main>
+</body>
+</html>

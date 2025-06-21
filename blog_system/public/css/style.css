@@ -1,0 +1,59 @@
+/* --- ブログ一覧と記事詳細ページ用スタイル追加 --- */
+
+/* 記事タイトル */
+main h1 {
+    font-size: 1.6em;
+    margin-bottom: 0.3em;
+    color: #195b67;
+  }
+  
+  /* 記事見出しカード */
+  article {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+  }
+  
+  article h2 {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    color: #227087;
+  }
+  
+  article p {
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  /* 個別ページ：本文 */
+  main p {
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1em;
+  }
+  
+  /* フォームやボタン */
+  form input[type="text"],
+  form input[type="file"],
+  form textarea {
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 0.3em;
+    box-sizing: border-box;
+  }
+  
+  form button {
+    background-color: #4faac8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #3c94b0;
+  }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title><%= post.title %>｜泉さんの花だより</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main style="max-width: 800px; margin: auto; padding: 20px;">
+    <h1><%= post.title %></h1>
+    <p style="color: #666; font-size: 0.9em;"><%= new Date(post.createdAt).toLocaleDateString('ja-JP') %></p>
+
+    <% if (post.imagePath) { %>
+      <img src="<%= post.imagePath %>" alt="投稿画像" style="max-width: 100%; margin: 1em 0;">
+    <% } %>
+
+    <p style="white-space: pre-line;"><%= post.content %></p>
+
+    <p style="margin-top: 2em;">
+      <a href="http://localhost:3000/blog">← 一覧に戻る</a>
+    </p>
+
+    <form action="/admin/delete/<%= post.id %>" method="POST" onsubmit="return confirm('本当に削除しますか？');">
+      <button type="submit" style="color: red;">🗑 この投稿を削除</button>
+    </form>
+    
+  </main>
+</body>
+</html>

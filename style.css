@@ -1,0 +1,88 @@
+/* --- 基本設定 --- */
+body {
+    font-family: 'Kaisei Decol', 'Yu Gothic', 'Hiragino Kaku Gothic ProN', sans-serif;
+    background-color: #fffaf7;
+    color: #444;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* --- ナビゲーション --- */
+  nav {
+    background-color: #fce4ec;
+    padding: 12px 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #d81b60;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #880e4f;
+  }
+  
+  /* --- ヘッダー --- */
+  header h1 {
+    font-size: 1.8em;
+    text-align: center;
+    margin: 1em auto 0.5em;
+    color: #c2185b;
+  }
+  
+  /* --- セクション・見出し --- */
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255, 192, 203, 0.2);
+  }
+  
+  h2 {
+    border-left: 6px solid #f8bbd0;
+    padding-left: 10px;
+    color: #ad1457;
+    font-size: 1.4em;
+    margin-top: 2.5em;
+  }
+  
+  section {
+    margin-bottom: 40px;
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* --- ボタン風リンク --- */
+  a.button {
+    display: inline-block;
+    background-color: #f48fb1;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+
+  a.button:hover {
+    background-color: #e91e63;
+  }

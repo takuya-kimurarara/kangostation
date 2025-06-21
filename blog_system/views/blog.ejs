@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>泉さんの花だよりブログ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main style="max-width: 800px; margin: auto; padding: 20px;">
+    <h1>🌼 泉さんの花だより</h1>
+    <p>季節の花や日々の気づきを綴る、やさしいブログです。</p>
+
+    <% if (posts.length === 0) { %>
+      <p>まだ投稿はありません。</p>
+    <% } else { %>
+      <% posts.forEach(post => { %>
+        <article style="border-bottom: 1px solid #ccc; margin-bottom: 2em; padding-bottom: 1em;">
+          <h2><a href="/blog/<%= post.id %>"><%= post.title %></a></h2>
+          <p style="font-size: 0.9em; color: #666;"><%= new Date(post.createdAt).toLocaleDateString('ja-JP') %></p>
+
+          <% if (post.imagePath) { %>
+            <img src="<%= post.imagePath %>" alt="ブログ画像" style="max-width: 100%; margin-top: 0.5em;">
+          <% } %>
+
+          <p><%= post.content.slice(0, 80) %>...</p>
+          <a href="/blog/<%= post.id %>">→ 続きを読む</a>
+        </article>
+      <% }); %>
+    <% } %>
+
+    <p style="margin-top: 2em;">
+      <a href="/admin">＋ 新しい記事を投稿する</a>
+    </p>
+  </main>
+</body>
+</html>
